@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chamar Paciente</title>
+</head>
+<body>
+    <h1>Chamar Próximo Paciente</h1>
+
+    {% if senha %}
+        <p><strong>Senha:</strong> {{ senha.codigo }}</p>
+        <p><strong>Especialidade:</strong> {{ senha.especialidade }}</p>
+        <p><strong>Tipo:</strong> {{ senha.get_tipo_display }}</p>
+    {% else %}
+        <p>Nenhum paciente na fila.</p>
+    {% endif %}
+
+    <a href="{% url 'gerar_senha' %}">Voltar</a>
+</body>
+</html>

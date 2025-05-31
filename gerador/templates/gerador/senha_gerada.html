@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Senha Gerada</title>
+</head>
+<body>
+    <h1>Senha Gerada com Sucesso!</h1>
+    <p><strong>Código:</strong> {{ senha.codigo }}</p>
+    <p><strong>Tipo:</strong> {{ senha.get_tipo_display }}</p>
+    <p><strong>Especialidade:</strong> {{ senha.especialidade }}</p>
+
+    <a href="{% url 'gerar_senha' %}">Gerar outra senha</a>
+</body>
+</html>
